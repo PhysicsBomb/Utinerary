@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+	<title>Form</title>
+		<style>
+		form{
+			box-shadow: 2px 2px 2px 2px #888888;
+			border-radius: 3px;
+			background-color: #00B2FF;
+		};
+		</style>
+			<body>
+				<form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
+				Name: <input type="text" name="fname" required>
+				 <button id="b">export to CSV</button>
+				</form>
+				<script type="text/javascript">
+        function exportToCsv() {
+            var myCsv = "Col1,Col2,Col3\nval1,val2,val3";
+
+            window.open('data:text/csv;charset=utf-8,' + escape(myCsv));
+        }
+
+        var button = document.getElementById('b');
+        button.addEventListener('click', exportToCsv);
+    </script>
+
+			</body>
+</html>
