@@ -1,19 +1,26 @@
 <!DOCTYPE HTML>
 <html>
-	<title>Form</title>
-		<style>
-		form{
-			box-shadow: 2px 2px 2px 2px #888888;
-			border-radius: 3px;
-			background-color: #00B2FF;
-		};
-		</style>
-			<body>
-				<form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
-				Name: <input type="text" name="fname" required>
-				 <button id="b">export to CSV</button>
-				</form>
-				<script type="text/javascript">
+	<head>
+		<title>Utinerary</title>
+
+		<link rel="stylesheet" type="text/css" href="styling.css">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	</head>	
+					
+	<body>
+		<div class="jumbotron">
+			<h1>Plan your travel. Smarter.</h1>
+		</div>
+		<form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
+		Name: <input type="text" name="fname" required>
+		<button id="b">export to CSV</button>
+		</form>
+		<script type="text/javascript">
         function exportToCsv() {
             var myCsv = "Col1,Col2,Col3\nval1,val2,val3";
 
