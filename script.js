@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // define variables beforehand to give them global access
 
 var name = 1;
