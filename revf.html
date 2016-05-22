@@ -1,21 +1,15 @@
 <!DOCTYPE HTML>
 <html>
-	<title>Form</title>
-	<style>
-	html{
-		box-shadow: 20px 20px 20px #d3d3d3;
-	}
-	;
-	</style>
-			<body>
-				<form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
-				Name: <input type="text" name="fname" required>
-				</form>
-				<script type="text/javascript">
 	<head>
+	<style>
+	body div{
+		box-shadow: 10px 10px 10px #d3d3d3;
+	}
+	</style>
+		
 		<title>Utinerary</title>
 
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="style/style.css">
 
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -26,15 +20,20 @@
 	</head>	
 					
 	<body>
-	<div>
 		<div class="jumbotron">
 			<h1>Plan your travel. Smarter.</h1>
 		</div>
-		<form name="myForm" onsubmit="return validateForm()" method="post">
+		<form style="text-align: left;" name="myForm" onsubmit="return validateForm()" method="post">
 		<p>Where are you going? : <input type="text" id="name-input" name="fname" required></p>
 		<p>When are you going? Please put it in mm/dd/yy format. : <input type="text" id="date-input" name="fwhen" required></p>
-		<p>Select the types of things you are interested in: <input type="text" id="do-input" name="fdo" required></p>
-		<button id="b">Submit</button>
+		<p>Select the types of things you are interested in:</p>
+		<input type="checkbox" name="activity" value="tourist_attraction" checked> Major Tourist Attractions<br>
+  		<input type="checkbox" name="activity" value="female">Food and Drink<br>
+  		<input type="checkbox" name="activity" value="other">Historical/Informational<br>
+  		<input type="checkbox" name="activity" value="other">Adventure/Athletic<br>
+  		<input type="checkbox" name="activity" value="other">Beaches/Parks/Relaxing<br> <br>
+
+		<button id="b">export to CSV</button>
 		</form>
 		<script type="text/javascript">
 >>>>>>> refs/remotes/origin/master
