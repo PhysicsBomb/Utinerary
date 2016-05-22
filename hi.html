@@ -1,9 +1,9 @@
-!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 	<head>
 		<title>Utinerary</title>
 
-		<link rel="stylesheet" type="text/css" href="styling.css">
+		<link rel="stylesheet" type="text/css" href="style/style.css">
 
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -11,6 +11,9 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        
+        <script src="script.js" type="text/javascript"></script>
+        
 	</head>	
 					
 	<body>
@@ -18,22 +21,11 @@
 			<h1>Plan your travel. Smarter.</h1>
 		</div>
 		<form name="myForm" onsubmit="return validateForm()" method="post">
-		<p>>Where did you go? : <input type="text" id="name-input" name="fname" required></p>
+		<p>Where did you go? : <input type="text" id="name-input" name="fname" required></p>
 		<p>What did you do there? Seperate each activity with a comma: <input type="text" id="do-input" name="fdo" required></p>
 		<p>What did you like about the place? Seperate each thing with a comma: <input type="text" id="like-input" name="flike" required></p>
 		<p>What did you not like about the place? Seperate each thing with a comma: <input type="text" id="dislike-input" name="fhate" required></p>
 		<button id="b">export to CSV</button>
 		</form>
-		<script type="text/javascript">
-        function exportToCsv() {
-            var name = $("#name-input").val();
-            var place = $("#do-input").val();
-            var like =  $("#like-input").val();
-            var nolike =  $("#dislike-input").val();
-            console.log(nolike);
-        }
-        $("#b").click(exportToCsv);
-    </script>
-
-			</body>
+    </body>
 </html>
