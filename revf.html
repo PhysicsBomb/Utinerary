@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+	<title>Form</title>
+	<style>
+	html{
+		box-shadow: 20px 20px 20px #d3d3d3;
+	}
+	;
+	</style>
+			<body>
+				<form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
+				Name: <input type="text" name="fname" required>
+				</form>
+				<script type="text/javascript">
+	<head>
+		<title>Utinerary</title>
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	</head>	
+					
+	<body>
+	<div>
+		<div class="jumbotron">
+			<h1>Plan your travel. Smarter.</h1>
+		</div>
+		<form name="myForm" onsubmit="return validateForm()" method="post">
+		<p>Where are you going? : <input type="text" id="name-input" name="fname" required></p>
+		<p>When are you going? Please put it in mm/dd/yy format. : <input type="text" id="date-input" name="fwhen" required></p>
+		<p>Select the types of things you are interested in: <input type="text" id="do-input" name="fdo" required></p>
+		<button id="b">Submit</button>
+		</form>
+		<script type="text/javascript">
+>>>>>>> refs/remotes/origin/master
+        function exportToCsv() {
+            var name = $("#name-input").val();
+            var place = $("#do-input").val();
+            var like =  $("#like-input").val();
+            var nolike =  $("#dislike-input").val();
+            console.log(nolike);
+        };
+        $("#b").click(exportToCsv);
+    </script>
+
+			</body>
+</html>
+
