@@ -1,6 +1,11 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+        <style>
+            body div{
+                box-shadow: 20px 20px 20px #d3d3d3;
+            }
+        </style>
 		<title>Utinerary</title>
 
 		<link rel="stylesheet" type="text/css" href="style/style.css">
@@ -11,9 +16,17 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src="core.js"></script>
+                <!-- sha1 -->
+        <script src="sha1.js"></script>
+        <!-- sha256 -->
+        <script src="sha256.js"></script>
+        <script src="enc-base64.min.js"></script>
+        <script src="oauth-1.0a.js"></script>
+        <script src="main.js"></script>
         
-        
-	</head>	
+    </head>	
+    
 					
 	<body>
 		<div class="jumbotron">
@@ -21,26 +34,17 @@
 		</div>
 		<form style="text-align: left;" name="myForm" onsubmit="return validateForm()" method="post">
 		<p>Where are you going? : <input type="text" id="name-input" name="fname" required></p>
-		<p>When are you going? Please put it in mm/dd/yy format. : <input type="text" id="date-input" name="fwhen" required></p>
+		<p>When are you going? Please put it in mm/dd/yy format. : <input type="text" id="date-input" name="fwhen" required> till <input type="text" id="date-input" name="fwhen" required></p>
+        <p>What's the zipcode of the place you're visiting? : <input type="int" id="zipcode-input" name="fwhere" required></p>
 		<p>Select the types of things you are interested in:</p>
-		<input type="checkbox" name="activity" value="tourist_attraction" checked> Major Tourist Attractions<br>
-  		<input type="checkbox" name="activity" value="female">Food and Drink<br>
-  		<input type="checkbox" name="activity" value="other">Historical/Informational<br>
-  		<input type="checkbox" name="activity" value="other">Adventure/Athletic<br>
-  		<input type="checkbox" name="activity" value="other">Beaches/Parks/Relaxing<br> <br>
+		<input type="checkbox" id="tourist_input" name="activity" value="tourist_attraction"> Major Tourist Attractions<br>
+  		<input type="checkbox" id="food_input" name="activity" value="female"> Food and Drink<br>
+  		<input type="checkbox" id="museum_input" name="activity" value="other"> Historical/Informational<br>
+  		<input type="checkbox" id="adventure_input" name="activity" value="other"> Adventure/Athletic<br>
+  		<input type="checkbox" id="beaches_input" name="activity" value="other"> Beaches/Parks/Relaxing<br> <br>
 
-		<button id="b">export to CSV</button>
+		<button type="button" id="b" onclick="ajaxcaller()">Submit</button>
 		</form>
-		<script type="text/javascript">
-        function exportToCsv() {
-            var name = $("#name-input").val();
-            var place = $("#do-input").val();
-            var like =  $("#like-input").val();
-            var nolike =  $("#dislike-input").val();
-            console.log(nolike);
-        };
-        $("#b").click(exportToCsv);
-        </script>
     </body>
 </html>
 
