@@ -4,6 +4,8 @@
 		<title>Utinerary</title>
 
 		<link rel="stylesheet" type="text/css" href="style/style.css">
+        
+        <link href='https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif' rel='stylesheet' type='text/css'>
 
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -16,6 +18,7 @@
 		<div class="jumbotron">
 			<h1>Plan your travel. Smarter.</h1>
 		</div>
+        <div class="container">
 		<form class="form-group" name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
 		Where did you go? : <input type="text" name="fname" required>
         <br>
@@ -26,6 +29,7 @@
 		What did you not like about the place? Seperate each thing with a comma: <input type="text" name="fhate" required>
 		<button id="b">export to CSV</button>
 		</form>
+        </div>
 		<script type="text/javascript">
         function exportToCsv() {
             var myCsv = "Col1,Col2,Col3\nval1,val2,val3";

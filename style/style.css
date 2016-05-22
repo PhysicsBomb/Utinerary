@@ -1,7 +1,10 @@
 body {
-  font-family: Calibri, Verdana, Helvetica, Arial, sans-serif;
   text-align: center;
 }
 .jumbotron {
   background-color: #e5ccdd;
+  font-family: PT Sans, Verdana, sans-serif;
+}
+.container {
+  font-family: PT Sans, Verdana, sans-serif;
 }
