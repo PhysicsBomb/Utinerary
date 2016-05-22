@@ -3,8 +3,5 @@ body {
   text-align: center;
 }
 .jumbotron {
-  background-image: url("jumboback.jpg");
-  background-repeat: no-repeat;
-  vertical-align: middle;
-  background-size: cover;
+  background-color: #e5ccdd;
 }

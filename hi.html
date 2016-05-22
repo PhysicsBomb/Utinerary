@@ -16,10 +16,13 @@
 		<div class="jumbotron">
 			<h1>Plan your travel. Smarter.</h1>
 		</div>
-		<form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
+		<form class="form-group" name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
 		Where did you go? : <input type="text" name="fname" required>
+        <br>
 		What did you do there? Seperate each activity with a comma: <input type="text" name="fdo" required>
+        <br>
 		What did you like about the place? Seperate each thing with a comma: <input type="text" name="flike" required>
+        <br>
 		What did you not like about the place? Seperate each thing with a comma: <input type="text" name="fhate" required>
 		<button id="b">export to CSV</button>
 		</form>
