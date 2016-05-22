@@ -3,7 +3,7 @@
 	<head>
 		<title>Utinerary</title>
 
-		<link rel="stylesheet" type="text/css" href="styling.css">
+		<link rel="stylesheet" type="text/css" href="style/style.css">
 
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -24,16 +24,5 @@
 		<p>What did you not like about the place? Seperate each thing with a comma: <input type="text" id="dislike-inputname="fhate" required></p>
 		<button id="b">export to CSV</button>
 		</form>
-		<script type="text/javascript">
-        function exportToCsv() {
-            var name = $("#name-input").val();
-            var place = $("#do-input").val()
-            var like =  $("#like-input").val()
-            var nolike =  $("#dislike-input").val()
-            console.log(name)
-        }
-        $("#b").click(exportToCsv);
-    </script>
-
-			</body>
+    </body>
 </html>
