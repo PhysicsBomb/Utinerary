@@ -18,10 +18,26 @@
 			<h1>Plan your travel. Smarter.</h1>
 		</div>
 		<form name="myForm" onsubmit="return validateForm()" method="post">
-		<p>Where did you go? : <input type="text" id="name-input" name="fname" required></p>
-		<p>What did you do there? Seperate each activity with a comma: <input type="text" id="do-input" name="fdo" required></p>
-		<p>What did you like about the place? Seperate each thing with a comma: <input type="text" id="like-input" name="flike" required></p>
-		<p>What did you not like about the place? Seperate each thing with a comma: <input type="text" id="dislike-input" name="fhate" required></p>
+		<p>Where are you going? : <input type="text" id="name-input" name="fname" required></p>
+		<p>When are you going?</p>
+		<div style="overflow:hidden;">
+    		<div class="form-group">
+        		<div class="row">
+            		<div class="col-md-8">
+                		<div id="datetimepicker12"></div>
+            		</div>
+        		</div>
+    		</div>
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker12').datetimepicker({
+                inline: true,
+                sideBySide: true
+            });
+        });
+    </script>
+</div>
+		<p>Select the types of things you are interested in: <input type="text" id="do-input" name="fdo" required></p>
 		<button id="b">export to CSV</button>
 		</form>
 		<script type="text/javascript">
