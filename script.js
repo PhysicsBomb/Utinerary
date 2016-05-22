@@ -24,7 +24,7 @@ $.ajax({
         // put error code here
     },
        
-    dataType: "json",
+    dataType: "json ",
     
     success: function() {
         
