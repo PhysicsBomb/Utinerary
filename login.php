@@ -1,6 +1,6 @@
 <?php // login.php
 require_once 'openid.php';
-$openid = new LightOpenID("my-domain.com");
+$openid = new LightOpenID("utinerary.com");
 
 if ($openid->mode) {
     if ($openid->mode == 'cancel') {
